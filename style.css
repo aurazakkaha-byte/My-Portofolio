@@ -1,0 +1,136 @@
+/* Root Variables for easy maintenance */
+:root {
+    --bg-color: #EDE3D9;
+    --card-bg: #FFFFFF;
+    --text-main: #1A1A1A;
+    --text-sub: #555555;
+    --accent: #D4C3B3;
+    --transition: all 0.4s ease;
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1E1E1E;
+    --text-main: #EDE3D9;
+    --text-sub: #BBBBBB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Theme Toggle Styling */
+.theme-toggle {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: var(--card-bg);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+/* Hero Section */
+.profile-img-container {
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.subtext {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--text-sub);
+    margin-bottom: 40px;
+}
+
+/* Links Section */
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.75rem;
+    color: var(--text-sub);
+    letter-spacing: 0.5px;
+}
