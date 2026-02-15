@@ -1,4 +1,4 @@
-// Function for Dark Mode Toggle
+// Toggle Dark Mode Logic
 const themeBtn = document.getElementById('theme-btn');
 const body = document.body;
 const icon = document.getElementById('toggle-icon');
@@ -6,7 +6,6 @@ const icon = document.getElementById('toggle-icon');
 themeBtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     
-    // Change icon based on mode
     if (body.classList.contains('dark-mode')) {
         icon.innerText = '☀️';
         localStorage.setItem('theme', 'dark');
@@ -16,7 +15,7 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
-// Check for saved user preference on load
+// Persistence: Keep theme on reload
 window.onload = () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
